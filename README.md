@@ -1,71 +1,139 @@
 # Deep Learning Concepts and Implementations
+
 This repository explores key concepts in deep learning, providing implementations of fundamental techniques and models using Python. The repository includes:
 
-1. Basic Neural Networks
-2. Feedforward Neural Networks
-3. Recurrent Neural Networks (RNNs)
-4. Convolutional Neural Networks (CNNs)
+1. Basic Neural Networks (`basic.py`, `basic_nn.py`, `xor.py`)
+2. Feedforward Neural Networks (`dl.py`, `mnist.py`, `iris.py`)
+3. Recurrent Neural Networks (RNNs) (`rnn.py`, `stock_RNN.py`)
+4. Convolutional Neural Networks (CNNs) (`cnn.py`, `cnn_featuremap.py`, `fashionMNIST_pooling.py`)
+5. Data Augmentation (`data_aug.py`)
+6. Restricted Boltzmann Machine (`RBM.py`)
+7. Sentiment Analysis (`IMDB_sentiment.py`)
+8. Cityscapes Computer Vision (`cityscapes_cv.ipynb`)
+
 ## Table of Contents
-- Basic Neural Networks
-- Feedforward Neural Networks
-- Recurrent Neural Networks (RNNs)
-- Convolutional Neural Networks (CNNs)
-- Requirements
-- Usage
+
+-   Basic Neural Networks
+-   Feedforward Neural Networks
+-   Recurrent Neural Networks (RNNs)
+-   Convolutional Neural Networks (CNNs)
+-   Data Augmentation
+-   Restricted Boltzmann Machine
+-   Sentiment Analysis
+-   Cityscapes Computer Vision
+-   Requirements
+-   Usage
+
 ## Basic Neural Networks
-The basic.py script provides a custom implementation of a simple neural network built from scratch, using the following components:
 
-- Neuron class for individual neuron computations using the sigmoid activation function.
-- A small feedforward neural network that processes two inputs and outputs a single prediction. 
+Custom implementations of simple neural networks built from scratch:
+
+-   `basic.py`, `basic_nn.py`: Neuron class and small feedforward networks using sigmoid activation.
+-   `xor.py`: Neural network solving the XOR problem.
+
 ## Feedforward Neural Networks
-The dl.py script demonstrates a feedforward neural network using TensorFlow and Keras to classify handwritten digits from the MNIST dataset:
 
-- Architecture: Input layer (Flatten), one hidden layer (128 neurons with ReLU), and an output layer (10 neurons with Softmax).
-- Training: Categorical Crossentropy loss and Adam optimizer.
-- Evaluation: Accuracy on the test dataset.
-### Key Results:
-- Model achieves high accuracy on the MNIST dataset.
+Feedforward neural networks for classification tasks:
+
+-   `dl.py`: Classifies MNIST digits using TensorFlow/Keras.
+-   `mnist.py`: Additional MNIST experiments.
+-   `iris.py`: Classifies the Iris dataset.
+
 ## Recurrent Neural Networks (RNNs)
-The RNN implementation demonstrates how sequence data can be processed using a simple RNN architecture. The RNN is particularly useful for tasks involving sequential or time-series data, such as text, stock price predictions, or language modeling.
 
-### Highlights:
-- Architecture: Vanilla RNN, which processes sequential data step-by-step and updates the hidden state.
-- Applications: Suitable for tasks involving temporal dependencies.
+Processing sequence data with RNNs:
+
+-   `rnn.py`: Vanilla RNN for sequence modeling.
+-   `stock_RNN.py`: RNN for stock price prediction.
+
 ## Convolutional Neural Networks (CNNs)
-The cnn.py script highlights the power of Convolutional Neural Networks through the application of the Sobel filter:
 
-- Task: Edge detection in images using the horizontal Sobel filter.
-- Tools: NumPy for convolution, skimage for image processing, and Matplotlib for visualization.
-### Example Output:
-Displays the original image alongside the filtered image, highlighting horizontal edges.
+Image processing and feature extraction with CNNs:
+
+-   `cnn.py`: Edge detection using Sobel filter.
+-   `cnn_featuremap.py`: Visualizes CNN feature maps.
+-   `fashionMNIST_pooling.py`: CNN with pooling on FashionMNIST.
+
+## Data Augmentation
+
+-   `data_aug.py`: Demonstrates image data augmentation techniques.
+
+## Restricted Boltzmann Machine
+
+-   `RBM.py`: Implements a Restricted Boltzmann Machine for unsupervised learning.
+
+## Sentiment Analysis
+
+-   `IMDB_sentiment.py`: Sentiment analysis on the IMDB dataset using deep learning.
+
+## Cityscapes Computer Vision
+
+-   `cityscapes_cv.ipynb`: Computer vision tasks on the Cityscapes dataset (Jupyter Notebook).
 
 ## Requirements
-1. Install the necessary Python libraries:
+
+Install the necessary Python libraries:
 
 ```bash
-pip install numpy tensorflow scikit-image matplotlib
-````
+pip install numpy tensorflow scikit-image matplotlib keras scikit-learn pandas
+```
 
 ## Usage
+
 Clone the repository and run the scripts as needed:
 
-1. Run the basic neural network:
-````bash
-python basic.py
-````
+1. Run basic neural network examples:
 
-2. Train and evaluate the feedforward neural network:
-````bash
+```bash
+python basic.py
+python basic_nn.py
+python xor.py
+```
+
+2. Train and evaluate feedforward neural networks:
+
+```bash
 python dl.py
-````
- 
-3. Visualize CNN edge detection:
-````bash
+python mnist.py
+python iris.py
+```
+
+3. Visualize and experiment with CNNs:
+
+```bash
 python cnn.py
-```` 
-4. Implement RNN:
-````bash
+python cnn_featuremap.py
+python fashionMNIST_pooling.py
+```
+
+4. Data augmentation:
+
+```bash
+python data_aug.py
+```
+
+5. Run RNN examples:
+
+```bash
 python rnn.py
-````
+python stock_RNN.py
+```
+
+6. Restricted Boltzmann Machine:
+
+```bash
+python RBM.py
+```
+
+7. Sentiment analysis:
+
+```bash
+python IMDB_sentiment.py
+```
+
+8. Cityscapes Computer Vision (Jupyter Notebook):
+   Open `cityscapes_cv.ipynb` in Jupyter Notebook or VS Code.
+
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
